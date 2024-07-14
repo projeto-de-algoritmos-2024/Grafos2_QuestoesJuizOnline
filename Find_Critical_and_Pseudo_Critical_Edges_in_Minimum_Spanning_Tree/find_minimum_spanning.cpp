@@ -1,0 +1,89 @@
+#include <vector>
+#include <numeric>
+#include <algorithm>
+
+using std::vector;
+using std::sort;
+using std::iota;
+
+// Estrutura de dados union-find para ajudar a combinar nós em conjuntos disjuntos de forma segura
+class UnionFind {
+public:
+    vector<int> parent; // Array de pais para armazenar o elemento representante de cada conjunto
+    int setCount; // Contagem de conjuntos disjuntos.
+
+    //inicializa o UnionFind com n elementos.
+    UnionFind(int n) : setCount(n), parent(vector<int>(n)) {
+        iota(parent.begin(), parent.end(), 0); //
+    }
+
+    // Tenta unir os conjuntos contendo os elementos 'a' e 'b'
+    bool unite(int a, int b) {
+        a = find(a);
+        b = find(b);
+        if (a == b) return false; // 'a' e 'b' já estão no mesmo conjunto.
+        parent[a] = b; // Une os conjuntos.
+        --setCount;
+        return true;
+    }
+
+    // Encontra o elemento representante (pai) do conjunto contendo 'x'.
+    int find(int x) {
+        if (parent[x] != x) parent[x] = find(parent[x]); // Compressão de caminho.
+        return parent[x];
+    }
+};
+
+class Solution {
+public:
+    // Função principal para encontrar arestas críticas e pseudo-críticas em um grafo.
+    vector<vector<int>> findCriticalAndPseudoCriticalEdges(int n, vector<vector<int>>& edges) {
+        // Adiciona o índice da aresta ao final de cada vetor de arestas para rastreá-las após a ordenação.
+        for (int i = 0; i < edges.size(); ++i) edges[i].push_back(i);
+
+        // Ordena as arestas por peso. Se os pesos forem iguais, ordena pelos índices adicionados acima.
+        sort(edges.begin(), edges.end(), [](const auto& a, const auto& b) { return a[2] < b[2]; });
+
+        int minimumSpanningTreeWeight = 0; // Para armazenar o peso total da árvore geradora mínima.
+        UnionFind uf(n); // Cria uma instância de UnionFind.
+
+        // Cria a árvore geradora mínima e calcula seu peso.
+        for (auto& edge : edges) {
+            if (uf.unite(edge[0], edge[1])) minimumSpanningTreeWeight += edge[2];
+        }
+
+        vector<vector<int>> result(2); // Vetor resultante para armazenar arestas críticas e pseudo-críticas.
+
+        for (auto& edge : edges) {
+            int from = edge[0], to = edge[1], weight = edge[2], index = edge[3];
+            UnionFind ufWithoutEdge(n);
+            int weightWithoutEdge = 0;
+
+            // Verifica se remover a aresta aumenta o peso total da AGM (tornando-a crítica).
+            for (auto& nextEdge : edges) {
+                if (nextEdge[3] != index && ufWithoutEdge.unite(nextEdge[0], nextEdge[1]))
+                    weightWithoutEdge += nextEdge[2];
+            }
+
+            if (ufWithoutEdge.setCount > 1 || (ufWithoutEdge.setCount == 1 && weightWithoutEdge > minimumSpanningTreeWeight)) {
+                result[0].push_back(index); // Aresta é crítica.
+                continue;
+            }
+
+            // Verifica se incluir a aresta não aumenta o peso total da AGM (tornando-a pseudo-crítica).
+            UnionFind ufWithEdge(n);
+            ufWithEdge.unite(from, to);
+            int weightWithEdge = weight;
+
+            for (auto& nextEdge : edges) {
+                if (nextEdge[3] != index && ufWithEdge.unite(nextEdge[0], nextEdge[1]))
+                    weightWithEdge += nextEdge[2];
+            }
+
+            if (weightWithEdge == minimumSpanningTreeWeight) {
+                result[1].push_back(index); // Aresta é pseudo-crítica.
+            }
+        }
+        return result;
+    }
+};
