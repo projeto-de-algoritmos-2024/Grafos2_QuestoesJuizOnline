@@ -16,22 +16,23 @@ A apresentação pode ser vista no YouTube por meio do link:
 ## Sobre
 
 Este projeto consiste na realização de exercícios de plataformas de juízes eletrônicos. Serão desenvolvidos problemas de média e alta
-complexidade com ênfase em grafos. 
+complexidade com ênfase nos conteúdos vistos no módulo de grafos 2. 
 
 ## Screenshots
 
-#### Exercício 01 - X
+#### Exercício 01 - Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree
 
-Dificuldade: X <br>
-Descrição do Problema: [X](Y)<br>
+Dificuldade: Dífícil <br>
+Descrição do Problema: [1489. Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree
+](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/description/)<br>
 Solução Proposta: [Código de Solução]() 
 
 ![](assets/)
 
-#### Exercício 02 - X
+#### Exercício 02 - Min Cost to Connect All Points
 
-Dificuldade: X <br>
-Descrição do Problema: [X](Y)<br>
+Dificuldade: Média <br>
+Descrição do Problema: [1584. Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/description/)<br>
 Solução Proposta: [Código de Solução]() 
 
 ![](assets/)
