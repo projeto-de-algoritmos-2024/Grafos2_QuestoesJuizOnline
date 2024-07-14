@@ -1,45 +1,89 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
-
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
+# Questões - Juíz Online
 
 **Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Conteúdo da Disciplina**: Grafos 2<br>
 
 ## Alunos
-|Matrícula | Aluno |
-| -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
 
-## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+| Matrícula  | Aluno                               |
+| ---------- | ----------------------------------- |
+| 21/1062016 | José André Rabelo Rocha |
+| 20/0020323 | Jefferson Sena Oliveira         |
+
+## Apresentação
+A apresentação pode ser vista no YouTube por meio do link: 
+
+## Sobre
+
+Este projeto consiste na realização de exercícios de plataformas de juízes eletrônicos. Serão desenvolvidos problemas de média e alta
+complexidade com ênfase em grafos. 
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
 
-## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
+#### Exercício 01 - X
+
+Dificuldade: X <br>
+Descrição do Problema: [X](Y)<br>
+Solução Proposta: [Código de Solução]() 
+
+![](assets/)
+
+#### Exercício 02 - X
+
+Dificuldade: X <br>
+Descrição do Problema: [X](Y)<br>
+Solução Proposta: [Código de Solução]() 
+
+![](assets/)
+
+#### Exercício 03 - X
+
+Dificuldade: X <br>
+Descrição do Problema: [X](Y)<br>
+Solução Proposta: [Código de Solução]() 
+
+![](assets/)
+
+#### Exercício 04 - X
+
+Dificuldade: X <br>
+Descrição do Problema: [X](Y)<br>
+Solução Proposta: [Código de Solução]() 
+
+![](assets/)
+
+## Instalação
+
+**Linguagem**: C, C++<br>
+<!-- **Framework**: (caso exista)<br> -->
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
-## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+## Uso
 
-## Outros 
+Instruções para compilar e executar o código C++:
+
+1. Certifique-se de ter um compilador para C, C++ instalado em sua máquina. Recomendamos o gcc.
+
+2. Faça o clone do repositório Git para o seu ambiente local.
+
+3. No terminal, navegue até o diretório onde está localizado o arquivo de código-fonte (.cpp ou .c) que deseja compilar.
+
+4. - Compile o arquivo de código-fonte utilizando o seguinte comando:
+```g++ -o <nome-do-executavel> <nome-do-arquivo.cpp>```
+Substitua <nome-do-executavel> pelo nome desejado para o executável e <nome-do-arquivo.cpp> pelo nome do arquivo de código-fonte.
+    - Para a execução em C: Compile o arquivo de código-fonte utilizando o seguinte comando:
+```gcc <nome-do-arquivo.cpp> -o <nome-do-executavel> ```
+Substitua <nome-do-executavel> pelo nome desejado para o executável e <nome-do-arquivo.cpp> pelo nome do arquivo de código-fonte.
+
+5. Após a compilação bem-sucedida, execute o programa com o seguinte comando:
+```./<nome-do-executavel>```
+Certifique-se de estar no diretório correto em seu terminal para executar o programa.
+
+6. Opcional: Deixamos arquivos de entrada para casos de teste (por exemplo, in.txt). Assim, você pode redirecionar a entrada para o programa durante a execução. Por exemplo:
+```./<nome-do-executavel> < <nome-do-arquivo-de-input>.txt```
+
+<!--## Outros
+
 Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
 
-
-
-
+-->
