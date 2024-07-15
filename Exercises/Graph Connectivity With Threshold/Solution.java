@@ -17,7 +17,7 @@ class UnionFind {
         if (x == parent[x]) {
             return x;
         }
-        return parent[x] = find(parent[x]); 
+        return parent[x] = find(parent[x]); // Path compression
     }
 
     public boolean union(int u, int v) {
@@ -26,7 +26,7 @@ class UnionFind {
         if (rootU == rootV) {
             return false;
         }
-        if (size[rootU] > size[rootV]) { 
+        if (size[rootU] > size[rootV]) { // Union by larger size
             size[rootU] += size[rootV];
             parent[rootV] = rootU;
         } else {
@@ -39,9 +39,9 @@ class UnionFind {
 
 class Solution {
     public List<Boolean> areConnected(int n, int threshold, int[][] queries) {
-        UnionFind uf = new UnionFind(n);
-        for (int z = threshold ; z <= n; z++) {
-            for (int x = z; x <= n; x += z) {
+        UnionFind uf = new UnionFind(n + 1);
+        for (int z = threshold + 1; z <= n; z++) {
+            for (int x = z * 2; x <= n; x += z) {
                 uf.union(z, x);
             }
         }
