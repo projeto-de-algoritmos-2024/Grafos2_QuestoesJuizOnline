@@ -33,9 +33,9 @@ Solução Proposta: [Código de Solução](https://github.com/projeto-de-algorit
 
 Dificuldade: Média <br>
 Descrição do Problema: [1584. Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/description/)<br>
-Solução Proposta: [Código de Solução]() 
+Solução Proposta: [Código de Solução](https://github.com/projeto-de-algoritmos-2024/Grafos2_QuestoesJuizOnline/blob/master/Min_Cost_to_Connect_All_Points/min_cost.cpp) 
 
-![](assets/)
+![](assets/min_cost.png)
 
 #### Exercício 03 - X
 
