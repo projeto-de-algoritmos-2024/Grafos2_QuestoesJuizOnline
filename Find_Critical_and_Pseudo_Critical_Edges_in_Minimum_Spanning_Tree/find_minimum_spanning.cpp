@@ -1,3 +1,4 @@
+#include <iostream>
 #include <vector>
 #include <numeric>
 #include <algorithm>
@@ -5,6 +6,9 @@
 using std::vector;
 using std::sort;
 using std::iota;
+using std::cin;
+using std::cout;
+using std::endl;
 
 // Estrutura de dados union-find para ajudar a combinar nós em conjuntos disjuntos de forma segura
 class UnionFind {
@@ -12,9 +16,9 @@ public:
     vector<int> parent; // Array de pais para armazenar o elemento representante de cada conjunto
     int setCount; // Contagem de conjuntos disjuntos.
 
-    //inicializa o UnionFind com n elementos.
+    // Inicializa o UnionFind com n elementos.
     UnionFind(int n) : setCount(n), parent(vector<int>(n)) {
-        iota(parent.begin(), parent.end(), 0); //
+        iota(parent.begin(), parent.end(), 0);
     }
 
     // Tenta unir os conjuntos contendo os elementos 'a' e 'b'
@@ -87,3 +91,38 @@ public:
         return result;
     }
 };
+
+int main() {
+    // Entrada do número de vértices e arestas
+    int n, e;
+    cout << "Digite o número de vértices: ";
+    cin >> n;
+    cout << "Digite o número de arestas: ";
+    cin >> e;
+
+    // Entrada das arestas
+    std::vector<std::vector<int>> edges(e, std::vector<int>(3));
+    cout << "Digite as arestas (formato: from to weight):" << endl;
+    for (int i = 0; i < e; ++i) {
+        cin >> edges[i][0] >> edges[i][1] >> edges[i][2];
+    }
+
+    // Criação de uma instância da solução e chamada da função
+    Solution solution;
+    std::vector<std::vector<int>> result = solution.findCriticalAndPseudoCriticalEdges(n, edges);
+
+    // Impressão dos resultados
+    std::cout << "Arestas críticas: ";
+    for (int index : result[0]) {
+        std::cout << index << " ";
+    }
+    std::cout << std::endl;
+
+    std::cout << "Arestas pseudo-críticas: ";
+    for (int index : result[1]) {
+        std::cout << index << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
