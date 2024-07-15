@@ -25,9 +25,9 @@ complexidade com ênfase nos conteúdos vistos no módulo de grafos 2.
 Dificuldade: Dífícil <br>
 Descrição do Problema: [1489. Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree
 ](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/description/)<br>
-Solução Proposta: [Código de Solução]() 
+Solução Proposta: [Código de Solução](https://github.com/projeto-de-algoritmos-2024/Grafos2_QuestoesJuizOnline/blob/master/Find_Critical_and_Pseudo_Critical_Edges_in_Minimum_Spanning_Tree/find_minimum_spanning.cpp)
 
-![](assets/)
+![](assets/minimum_spanning_tree.png)
 
 #### Exercício 02 - Min Cost to Connect All Points
 
