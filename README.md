@@ -39,23 +39,23 @@ Solução Proposta: [Código de Solução](https://github.com/projeto-de-algorit
 
 #### Exercício 03 - X
 
-Dificuldade: X <br>
-Descrição do Problema: [X](Y)<br>
-Solução Proposta: [Código de Solução]() 
+Dificuldade: Difícil <br>
+Descrição do Problema: [1627. Graph Connectivity With Threshold](https://leetcode.com/problems/graph-connectivity-with-threshold/description/)<br>
+Solução Proposta: [Código de Solução](https://github.com/projeto-de-algoritmos-2024/Grafos2_QuestoesJuizOnline/blob/master/Exercises/Graph%20Connectivity%20With%20Threshold/Solution.java) 
 
-![](assets/)
+![](assets/exercicio3.png)
 
 #### Exercício 04 - X
 
-Dificuldade: X <br>
-Descrição do Problema: [X](Y)<br>
+Dificuldade: Difícil <br>
+Descrição do Problema: [2699. Modify Graph Edge Weights](https://leetcode.com/problems/modify-graph-edge-weights/description/)<br>
 Solução Proposta: [Código de Solução]() 
 
-![](assets/)
+![](assets/exercicio4.png)
 
 ## Instalação
 
-**Linguagem**: C, C++<br>
+**Linguagem**: Java, C++<br>
 <!-- **Framework**: (caso exista)<br> -->
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 
